@@ -14,7 +14,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
 
     // Get module information
-    $app->map(['GET','OPTIONS'],'/data_bank/get/info/', function (Request $request, Response $response) {
+    $app->map(['GET','OPTIONS'],'/databank/get/info/', function (Request $request, Response $response) {
         $b = new DataBank($this->db);
         $body = $response->getBody();
         $response = $this->cache->withEtag($response, $this->etag2hour.'-'.trim($_SERVER['REQUEST_URI'],'/'));
@@ -23,7 +23,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
     })->add(new ApiKey);
 
     // Installation 
-    $app->get('/data_bank/install/{username}/{token}', function (Request $request, Response $response) {
+    $app->get('/databank/install/{username}/{token}', function (Request $request, Response $response) {
         $b = new DataBank($this->db);
         $b->username = $request->getAttribute('username');
         $b->token = $request->getAttribute('token');
@@ -33,7 +33,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
     });
 
     // Uninstall (This will clear all data) 
-    $app->get('/data_bank/uninstall/{username}/{token}', function (Request $request, Response $response) {
+    $app->get('/databank/uninstall/{username}/{token}', function (Request $request, Response $response) {
         $b = new DataBank($this->db);
         $b->username = $request->getAttribute('username');
         $b->token = $request->getAttribute('token');
@@ -47,7 +47,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
 
     // POST api to create new data
-    $app->post('/data_bank/create', function (Request $request, Response $response) {
+    $app->post('/databank/create', function (Request $request, Response $response) {
         $b = new DataBank($this->db);
         $datapost = $request->getParsedBody();
         $b->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
@@ -72,7 +72,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
 
     // POST api to update data
-    $app->post('/data_bank/update', function (Request $request, Response $response) {
+    $app->post('/databank/update', function (Request $request, Response $response) {
         $b = new DataBank($this->db);
         $datapost = $request->getParsedBody();
         $b->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
@@ -99,7 +99,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
 
     // POST api to delete data
-    $app->post('/data_bank/delete', function (Request $request, Response $response) {
+    $app->post('/databank/delete', function (Request $request, Response $response) {
         $b = new DataBank($this->db);
         $datapost = $request->getParsedBody();
         $b->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
@@ -115,7 +115,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
 
     // GET api to show all data (index) with pagination
-    $app->get('/data_bank/index/{username}/{token}/{page}/{itemsperpage}/', function (Request $request, Response $response) {
+    $app->get('/databank/index/{username}/{token}/{page}/{itemsperpage}/', function (Request $request, Response $response) {
         $b = new DataBank($this->db);
         $b->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
         $b->search = filter_var((empty($_GET['query'])?'':$_GET['query']),FILTER_SANITIZE_STRING);
@@ -130,7 +130,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
 
     // GET api to show all data (index) with pagination
-    $app->get('/data_bank/index/keywords/{username}/{token}/{page}/{itemsperpage}/', function (Request $request, Response $response) {
+    $app->get('/databank/index/keywords/{username}/{token}/{page}/{itemsperpage}/', function (Request $request, Response $response) {
         $b = new DataBank($this->db);
         $b->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
         $b->search = filter_var((empty($_GET['query'])?'':$_GET['query']),FILTER_SANITIZE_STRING);
@@ -148,7 +148,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
 
     // GET api to read single data
-    $app->get('/data_bank/read/{id}/{username}/{token}', function (Request $request, Response $response) {
+    $app->get('/databank/read/{id}/{username}/{token}', function (Request $request, Response $response) {
         $b = new DataBank($this->db);
         $b->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
         $b->username = $request->getAttribute('username');
@@ -160,7 +160,7 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
     });
 
     // GET api to read single data for public user (include cache)
-    $app->map(['GET','OPTIONS'],'/data_bank/read/{id}/', function (Request $request, Response $response) {
+    $app->map(['GET','OPTIONS'],'/databank/read/{id}/', function (Request $request, Response $response) {
         $body = $response->getBody();
         $response = $this->cache->withEtag($response, $this->etag.'-'.trim($_SERVER['REQUEST_URI'],'/'));
         if (SimpleCache::isCached(300,["apikey","lang"])){

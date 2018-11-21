@@ -16,7 +16,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1337/reSlim/src/api/data_bank/get/info/?apikey={yourapikey}",
+					"raw": "http://localhost:1337/reSlim/src/api/databank/get/info/?apikey={yourapikey}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -26,7 +26,7 @@
 						"reSlim",
 						"src",
 						"api",
-						"data_bank",
+						"databank",
 						"get",
 						"info",
 						""
@@ -52,7 +52,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1337/reSlim/src/api/data_bank/install/{yourusername}/{yourtoken}",
+					"raw": "http://localhost:1337/reSlim/src/api/databank/install/{yourusername}/{yourtoken}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -62,7 +62,7 @@
 						"reSlim",
 						"src",
 						"api",
-						"data_bank",
+						"databank",
 						"install",
 						"{yourusername}",
 						"{yourtoken}"
@@ -82,7 +82,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1337/reSlim/src/api/data_bank/uninstall/{yourusername}/{yourtoken}",
+					"raw": "http://localhost:1337/reSlim/src/api/databank/uninstall/{yourusername}/{yourtoken}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -92,7 +92,7 @@
 						"reSlim",
 						"src",
 						"api",
-						"data_bank",
+						"databank",
 						"uninstall",
 						"{yourusername}",
 						"{yourtoken}"
@@ -167,7 +167,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:1337/reSlim/src/api/data_bank/create",
+					"raw": "http://localhost:1337/reSlim/src/api/databank/create",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -177,7 +177,7 @@
 						"reSlim",
 						"src",
 						"api",
-						"data_bank",
+						"databank",
 						"create"
 					]
 				},
@@ -256,7 +256,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:1337/reSlim/src/api/data_bank/update",
+					"raw": "http://localhost:1337/reSlim/src/api/databank/update",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -266,7 +266,7 @@
 						"reSlim",
 						"src",
 						"api",
-						"data_bank",
+						"databank",
 						"update"
 					]
 				},
@@ -303,7 +303,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://server.cap-express.co.id/api/data_bank/delete",
+					"raw": "http://server.cap-express.co.id/api/databank/delete",
 					"protocol": "http",
 					"host": [
 						"server",
@@ -313,7 +313,7 @@
 					],
 					"path": [
 						"api",
-						"data_bank",
+						"databank",
 						"delete"
 					]
 				},
@@ -331,7 +331,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1337/reSlim/src/api/data_bank/read/{id}/{yourusername}/{yourtoken}",
+					"raw": "http://localhost:1337/reSlim/src/api/databank/read/{id}/{yourusername}/{yourtoken}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -341,7 +341,7 @@
 						"reSlim",
 						"src",
 						"api",
-						"data_bank",
+						"databank",
 						"read",
 						"{id}",
 						"{yourusername}",
@@ -362,7 +362,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1337/reSlim/src/api/data_bank/read/{id}/?apikey={yourapikey}&lang=en",
+					"raw": "http://localhost:1337/reSlim/src/api/databank/read/{id}/?apikey={yourapikey}&lang=en",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -372,7 +372,7 @@
 						"reSlim",
 						"src",
 						"api",
-						"data_bank",
+						"databank",
 						"read",
 						"{id}",
 						""
@@ -402,7 +402,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1337/reSlim/src/api/data_bank/index/{yourusername}/{yourtoken}/{page}/{itemsperpage}/?query={query to search}",
+					"raw": "http://localhost:1337/reSlim/src/api/databank/index/{yourusername}/{yourtoken}/{page}/{itemsperpage}/?query={query to search}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -412,7 +412,7 @@
 						"reSlim",
 						"src",
 						"api",
-						"data_bank",
+						"databank",
 						"index",
 						"{yourusername}",
 						"{yourtoken}",
@@ -441,7 +441,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1337/reSlim/src/api/data_bank/index/keywords/{yourusername}/{yourtoken}/{page}/{itemsperpage}/?query={query to search}&keywords={the keywords}&firstdate={yyyy-mm-dd}&lastdate={yyyy-mm-dd}",
+					"raw": "http://localhost:1337/reSlim/src/api/databank/index/keywords/{yourusername}/{yourtoken}/{page}/{itemsperpage}/?query={query to search}&keywords={the keywords}&firstdate={yyyy-mm-dd}&lastdate={yyyy-mm-dd}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -451,7 +451,7 @@
 						"reSlim",
 						"src",
 						"api",
-						"data_bank",
+						"databank",
 						"index",
 						"keywords",
 						"{yourusername}",
@@ -479,7 +479,7 @@
 						}
 					]
 				},
-				"description": "Index with Keywords\n---\nThis will index, show or scan all invoice data with keywords and pagination.\n\nNote:\n- Format param **firstdate** and **lastdate** is **yyyy-mm-dd** but this is **not required** as default.\n- **Custom_id** is required to more identify the owner's data.\n\nAbout Keywords:\n- Keywords is the **Custom_id** field inside table **data_bank**.\n- Keywords data could be string or json, it is depend from your input data\n- You can call many keywords.  \n  Example:  \n  a. You have Custom_id data like this >> {\"branchid\":\"cgk\",\"statusid\":1,\"status\":\"active\"}  \n  b. then you can input just by id \"cgk\" or separated with commas like this \"branchid\":\"cgk\",\"statusid\":1  \n  example: http://yourserver.com/api/data_bank/index/keywords/{yourusername}/{yourtoken}/{page}/{itemsperpage}/?keywords=**\"branchid\":\"cgk\",\"statusid\":1**&query=&firstdate=2018-08-01&lastdate=2018-08-31"
+				"description": "Index with Keywords\n---\nThis will index, show or scan all invoice data with keywords and pagination.\n\nNote:\n- Format param **firstdate** and **lastdate** is **yyyy-mm-dd** but this is **not required** as default.\n- **Custom_id** is required to more identify the owner's data.\n\nAbout Keywords:\n- Keywords is the **Custom_id** field inside table **databank**.\n- Keywords data could be string or json, it is depend from your input data\n- You can call many keywords.  \n  Example:  \n  a. You have Custom_id data like this >> {\"branchid\":\"cgk\",\"statusid\":1,\"status\":\"active\"}  \n  b. then you can input just by id \"cgk\" or separated with commas like this \"branchid\":\"cgk\",\"statusid\":1  \n  example: http://yourserver.com/api/databank/index/keywords/{yourusername}/{yourtoken}/{page}/{itemsperpage}/?keywords=**\"branchid\":\"cgk\",\"statusid\":1**&query=&firstdate=2018-08-01&lastdate=2018-08-31"
 			},
 			"response": []
 		}

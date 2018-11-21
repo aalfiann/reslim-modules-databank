@@ -3,7 +3,7 @@
         "name": "DataBank",
         "url": "https://github.com/aalfiann/reslim-modules-databank",
         "description": "Simple and Dynamic Bank management system",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "require": {
             "reSlim": "1.16.0"
         },
