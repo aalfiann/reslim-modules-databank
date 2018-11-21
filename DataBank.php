@@ -404,7 +404,7 @@ use PDO;                                            //To connect with database
 					$offsets = (($newitemsperpage <= 0)?0:$newitemsperpage);
 
 					// Query Data
-					$sql = "SELECT a.ID,a.Bank_name,a.Bank_Fullname,a.Bank_Address,a.Account_name,a.Account_no,a.Created_at,a.Created_by,a.Updated_at,a.Updated_by,a.Updated_sys,a.Custom_id,a.Custom_field 
+					$sql = "SELECT a.ID,a.Bank_name,a.Bank_fullname,a.Bank_address,a.Account_name,a.Account_no,a.Created_at,a.Created_by,a.Updated_at,a.Updated_by,a.Updated_sys,a.Custom_id,a.Custom_field 
 						from data_bank a
 						where 
 							".(!empty($this->firstdate) && !empty($this->lastdate)?'date(a.Created_at) BETWEEN :firstdate and :lastdate and ':'')."
@@ -481,7 +481,7 @@ use PDO;                                            //To connect with database
                     $offsets = (($newitemsperpage <= 0)?0:$newitemsperpage);
 					// Query Data
 					$sql = "SELECT 
-                            a.ID,a.Bank_name,a.Bank_Fullname,a.Bank_Address,a.Account_name,a.Account_no,a.Created_at,a.Created_by,a.Updated_at,a.Updated_by,a.Updated_sys,a.Custom_id,a.Custom_field 
+                            a.ID,a.Bank_name,a.Bank_fullname,a.Bank_address,a.Account_name,a.Account_no,a.Created_at,a.Created_by,a.Updated_at,a.Updated_by,a.Updated_sys,a.Custom_id,a.Custom_field 
                         FROM data_bank a
                         WHERE 
                             ".(!empty($this->firstdate) && !empty($this->lastdate)?'DATE(a.Created_at) BETWEEN :firstdate AND :lastdate AND ':'')."
