@@ -1,0 +1,509 @@
+{
+	"info": {
+		"_postman_id": "96f57b30-87af-4e05-86eb-f130cdce57fa",
+		"name": "DataBank",
+		"description": "API Dcoumentation about DataBank Module.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Info Module",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/data_bank/get/info/?apikey={yourapikey}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"data_bank",
+						"get",
+						"info",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}"
+						}
+					]
+				},
+				"description": "Get Info Module\n---\nGet info detail about DataBank Module."
+			},
+			"response": []
+		},
+		{
+			"name": "Install",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/data_bank/install/{yourusername}/{yourtoken}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"data_bank",
+						"install",
+						"{yourusername}",
+						"{yourtoken}"
+					]
+				},
+				"description": "Install DataBank Database\n---\nThis will install DataBank Database.\n\nNote:\n- Only user with role Superuser who can install.\n- Your exist database will be replaced if you ever install this before."
+			},
+			"response": []
+		},
+		{
+			"name": "Uninstall",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/data_bank/uninstall/{yourusername}/{yourtoken}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"data_bank",
+						"uninstall",
+						"{yourusername}",
+						"{yourtoken}"
+					]
+				},
+				"description": "Uninstall DataBank Database\n---\nThis will remove DataBank Database.\n\nNote:\n- Only user with role Superuser who can uninstall.\n- Your exist crudmod database will be removed clean."
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Bank_name",
+							"value": "",
+							"description": "Length is 1-50 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Bank_fullname",
+							"value": "",
+							"description": "Length is 0-50",
+							"type": "text"
+						},
+						{
+							"key": "Bank_address",
+							"value": "",
+							"description": "Length is 0-250",
+							"type": "text"
+						},
+						{
+							"key": "Account_name",
+							"value": "",
+							"description": "Length is 0-50 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Account_no",
+							"value": "",
+							"description": "Length is 0-20 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Custom_id",
+							"value": "",
+							"description": "Length is 0-250 {string/json}",
+							"type": "text"
+						},
+						{
+							"key": "Custom_field",
+							"value": "",
+							"description": "Length is 0-10000 {json}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/data_bank/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"data_bank",
+						"create"
+					]
+				},
+				"description": "Create\n---\nThis is to create new data"
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Bank_name",
+							"value": "",
+							"description": "Length is 1-50 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Bank_fullname",
+							"value": "",
+							"description": "Length is 0-250",
+							"type": "text"
+						},
+						{
+							"key": "Bank_address",
+							"value": "",
+							"description": "Length is 0-15 {numeric}",
+							"type": "text"
+						},
+						{
+							"key": "Account_name",
+							"value": "",
+							"description": "Length is 0-50 {email}",
+							"type": "text"
+						},
+						{
+							"key": "Account_no",
+							"value": "",
+							"description": "Length is 0-50 {url}",
+							"type": "text"
+						},
+						{
+							"key": "Custom_id",
+							"value": "",
+							"description": "Length is 0-250 {string/json}",
+							"type": "text"
+						},
+						{
+							"key": "Custom_field",
+							"value": "",
+							"description": "Length is 0-10000 {json}",
+							"type": "text"
+						},
+						{
+							"key": "ID",
+							"value": "{id}",
+							"description": "Length is 1-11 {numeric,required}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/data_bank/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"data_bank",
+						"update"
+					]
+				},
+				"description": "Update\n---\nThis to update the data"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						},
+						{
+							"key": "ID",
+							"value": "{id}",
+							"description": "Length is 1-11 {numeric,required}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://server.cap-express.co.id/api/data_bank/delete",
+					"protocol": "http",
+					"host": [
+						"server",
+						"cap-express",
+						"co",
+						"id"
+					],
+					"path": [
+						"api",
+						"data_bank",
+						"delete"
+					]
+				},
+				"description": "Delete\n---\nThis to delete the data\n\nNote:\n- Only user with role Superuser who can delete the data"
+			},
+			"response": []
+		},
+		{
+			"name": "Read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/data_bank/read/{id}/{yourusername}/{yourtoken}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"data_bank",
+						"read",
+						"{id}",
+						"{yourusername}",
+						"{yourtoken}"
+					]
+				},
+				"description": "Read\n---\nThis will show the data by id"
+			},
+			"response": []
+		},
+		{
+			"name": "Read Public",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/data_bank/read/{id}/?apikey={yourapikey}&lang=en",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"data_bank",
+						"read",
+						"{id}",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}"
+						},
+						{
+							"key": "lang",
+							"value": "en"
+						}
+					]
+				},
+				"description": "Read Public\n---\nThis will show the data by id for public access with api key.\n\nNote:\n- Public access is using cache with lifetime cache is 300 seconds"
+			},
+			"response": []
+		},
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/data_bank/index/{yourusername}/{yourtoken}/{page}/{itemsperpage}/?query={query to search}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"data_bank",
+						"index",
+						"{yourusername}",
+						"{yourtoken}",
+						"{page}",
+						"{itemsperpage}",
+						""
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "{query to search}"
+						}
+					]
+				},
+				"description": "Index\n---\nThis will index, show or scan all data with pagination.\n\nNote:\n- Format param **firstdate** and **lastdate** is **yyyy-mm-dd** but this is **not required** as default.\n- The purpose of index is for scan all data, so only user with role **Superuser** and **Admin** who able to access this."
+			},
+			"response": []
+		},
+		{
+			"name": "Index with Keywords",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/data_bank/index/keywords/{yourusername}/{yourtoken}/{page}/{itemsperpage}/?query={query to search}&keywords={the keywords}&firstdate={yyyy-mm-dd}&lastdate={yyyy-mm-dd}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"data_bank",
+						"index",
+						"keywords",
+						"{yourusername}",
+						"{yourtoken}",
+						"{page}",
+						"{itemsperpage}",
+						""
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "{query to search}"
+						},
+						{
+							"key": "keywords",
+							"value": "{the keywords}"
+						},
+						{
+							"key": "firstdate",
+							"value": "{yyyy-mm-dd}"
+						},
+						{
+							"key": "lastdate",
+							"value": "{yyyy-mm-dd}"
+						}
+					]
+				},
+				"description": "Index with Keywords\n---\nThis will index, show or scan all invoice data with keywords and pagination.\n\nNote:\n- Format param **firstdate** and **lastdate** is **yyyy-mm-dd** but this is **not required** as default.\n- **Custom_id** is required to more identify the owner's data.\n\nAbout Keywords:\n- Keywords is the **Custom_id** field inside table **data_bank**.\n- Keywords data could be string or json, it is depend from your input data\n- You can call many keywords.  \n  Example:  \n  a. You have Custom_id data like this >> {\"branchid\":\"cgk\",\"statusid\":1,\"status\":\"active\"}  \n  b. then you can input just by id \"cgk\" or separated with commas like this \"branchid\":\"cgk\",\"statusid\":1  \n  example: http://yourserver.com/api/data_bank/index/keywords/{yourusername}/{yourtoken}/{page}/{itemsperpage}/?keywords=**\"branchid\":\"cgk\",\"statusid\":1**&query=&firstdate=2018-08-01&lastdate=2018-08-31"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3bd337b7-a548-43e4-8990-6d0661e3c581",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a5625b98-ddc3-40fb-bb64-7e445a0384fb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
